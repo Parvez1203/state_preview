@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution{
+    display: none;
+}
+
+:root{
+    --backgoround_color : hsl(233, 47%, 7%);
+    --card_background_color: hsl(244, 38%, 16%);
+    --span_text_color: hsl(277, 64%, 61);
+    --header_font_size : 2rem;
+    --header_font_family : "Inter";
+    --text_font_size : 1rem;
+    --text_font_family : "Lexend Deca";
+    --figures_font_size: 12px;
+    --figure_text_font_size: 12px;
+
+
+}
+
+.window{
+    min-height: 100vh;
+    background: var(--backgoround_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.card{
+    width: 80%;
+    background: var(--card_background_color);
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 2rem 0 2rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card .image{
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.card .image img{
+
+   width: 100%; 
+    
+}
+
+.card .image span{
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgba(95, 33, 133, 0.562),rgba(95, 33, 133, 0.548))
+}
+
+.card .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.card .content h1{
+    
+    font-family: var(--header_font_family);
+    font-size: var(--header_font_size);
+    color: white;
+}
+
+.card .content h1 span{
+   color: hsl(277, 64%, 61%);
+}
+
+.card .content p{
+    font-family: var(--text_font_family);
+    font-size: var(--text_font_size);
+    margin-top: 1.3rem;
+    color: rgba(255, 245, 245, 0.637);
+}
+
+.card .content ul{
+   color: aliceblue;
+   list-style-type: none;
+   margin-top: 1rem;
+}
+
+.card .content ul li{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+ }
+
+ .card .content ul li .figure{
+    font-family: var(--header_font_family);
+    font-size: 1.6rem;
+    color: aliceblue;
+    font-weight: bolder;
+ }
+
+ .card .content ul li span{
+    font-family: var(--text_font_family);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 245, 245, 0.637);
+ }
+
+ @media only screen and (min-width: 900px){
+        :root{
+            --header_font_size : 2rem;
+            --text_font_size : 1rem;
+        }
+    
+    .card{
+        min-height: 25rem;
+        width: auto;
+        margin: auto 2rem;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .card .image{
+        position: relative;
+        width: 100%;
+        top: 2px;  
+    }
+
+    .card .image img{
+        position: absolute;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: inherit;
+        
+    }
+
+    .card .image span{
+        position: absolute;
+        width: 100%;
+        top: auto;
+        
+    }
+
+    .card .content{
+       display: flex;
+       flex-wrap: wrap;
+       text-align: left;
+       align-items: baseline;
+       justify-content: center;
+       padding: 0 3rem 0 3rem;
+       margin: 2rem 0 2rem 0;
+    }
+
+    
+
+    .card .content ul{
+       display: flex;
+      
+       font-size: 0.8rem;
+       
+    }
+
+    .card .content ul li{
+        margin-right: 30px; 
+     }
+
+     .card .content ul li .figure{
+       font-size: 1.2rem;
+     }
+
+     .attribution{
+        color: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 5rem;
+        text-align: center;
+        font-family: var(--header_font_family);
+        font-size: 1.7rem;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+    .attribution a{
+        text-decoration: none;
+        color: rgb(204, 214, 57) !important;
+    }
+    
+ }
